@@ -13,14 +13,9 @@
     "isolatedModules": true,
     "jsx": "react-jsx",
     "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
-    "paths": {
-      "@/*": ["./*"]
-    }
+    "plugins": [{ "name": "next" }],
+    "paths": { "@/*": ["./*"] },
+    "types": ["jest", "@testing-library/jest-dom"] 
   },
   "include": [
     "next-env.d.ts",
@@ -29,6 +24,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-  ],
+, "jest.setup.jsx", "lib/__tests__/LaunchesTable.test.tsx"  ],
   "exclude": ["node_modules"]
 }
