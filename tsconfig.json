@@ -15,7 +15,7 @@
     "incremental": true,
     "plugins": [{ "name": "next" }],
     "paths": { "@/*": ["./*"] },
-    "types": ["jest", "@testing-library/jest-dom"] 
+    "types": ["jest", "@testing-library/jest-dom"]
   },
   "include": [
     "next-env.d.ts",
@@ -23,7 +23,9 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
-    "**/*.mts"
-, "jest.setup.jsx", "lib/__tests__/LaunchesTable.test.tsx"  ],
+    "**/*.mts",
+    "jest.setup.jsx",
+    "lib/__tests__/LaunchesTable.test.tsx"
+  ],
   "exclude": ["node_modules"]
 }

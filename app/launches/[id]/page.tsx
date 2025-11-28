@@ -8,7 +8,7 @@ interface LaunchPageProps {
 }
 
 export default async function LaunchPage(props: LaunchPageProps) {
-  const { id } = await props.params;  
+  const { id } = await props.params;
 
   let launch: Launch | null = null;
 
@@ -38,12 +38,17 @@ export default async function LaunchPage(props: LaunchPageProps) {
   return (
     <div className="w-full min-h-screen bg-black text-white p-6 md:p-12 flex flex-col gap-6">
       <div className="max-w-4xl mx-auto">
-        <div className="text-4xl md:text-5xl font-bold mb-4">{launch.mission_name}</div>
-        <div className="text-gray-300 mb-3">{launch.details ?? "No details available"}</div>
+        <div className="text-4xl md:text-5xl font-bold mb-4">
+          {launch.mission_name}
+        </div>
+        <div className="text-gray-300 mb-3">
+          {launch.details ?? "No details available"}
+        </div>
 
         <div className="space-y-1 text-gray-200 mb-4">
           <div>
-            <strong>Rocket:</strong> {launch.rocket.rocket_name} ({launch.rocket.rocket_type ?? "Unknown"})
+            <strong>Rocket:</strong> {launch.rocket.rocket_name} (
+            {launch.rocket.rocket_type ?? "Unknown"})
           </div>
           {launch.launch_site?.site_name_long && (
             <div>
@@ -51,7 +56,8 @@ export default async function LaunchPage(props: LaunchPageProps) {
             </div>
           )}
           <div>
-            <strong>Launch date:</strong> {new Date(launch.launch_date_utc).toLocaleDateString()}
+            <strong>Launch date:</strong>{" "}
+            {new Date(launch.launch_date_utc).toLocaleDateString()}
           </div>
           {launch.launch_success !== undefined && (
             <div>
@@ -65,7 +71,10 @@ export default async function LaunchPage(props: LaunchPageProps) {
             <div className="text-xl font-semibold mb-2">Images</div>
             <div className="flex gap-3 overflow-x-auto py-2">
               {launch.links.flickr_images.map((img, index) => (
-                <div key={index} className="shrink-0 w-80 h-48 relative rounded-lg shadow-md overflow-hidden">
+                <div
+                  key={index}
+                  className="shrink-0 w-80 h-48 relative rounded-lg shadow-md overflow-hidden"
+                >
                   <Image
                     fill
                     src={img}

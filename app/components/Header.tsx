@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Menu } from "lucide-react";  
+import { Menu } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuTrigger,
@@ -7,9 +7,7 @@ import {
   DropdownMenuItem,
 } from "@/app/components/ui/dropdown-menu";
 
-const navLinks = [
-  { href: "/launches", label: "Launches" },
-];
+const navLinks = [{ href: "/launches", label: "Launches" }];
 
 export default function Header() {
   return (

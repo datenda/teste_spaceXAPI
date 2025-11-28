@@ -19,9 +19,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <body className="flex flex-col min-h-screen bg-gray-100 text-gray-900">
         <Header />
 
-        <main className="flex flex-1 w-full min-h-3/4">
-          {children}
-        </main>
+        <main className="flex flex-1 w-full min-h-3/4">{children}</main>
 
         <Footer />
       </body>

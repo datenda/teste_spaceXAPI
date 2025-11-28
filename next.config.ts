@@ -5,13 +5,11 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "*.staticflickr.com", 
+        hostname: "*.staticflickr.com",
       },
     ],
   },
   reactCompiler: true,
 };
-
-
 
 export default nextConfig;
